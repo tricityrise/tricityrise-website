@@ -1,28 +1,285 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TRICITYRISE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRICITYRISE | Real Estate Consultant</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f8f9fb;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+.hero{
+background:linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),
+url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.call-btn{
+background:#ffffff;
+color:#0f172a;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+}
+
+section{
+padding:60px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+color:#0f172a;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#0f172a;
+}
+
+.areas ul{
+columns:2;
+list-style:none;
+}
+
+.areas li{
+padding:8px 0;
+}
+
+.about{
+background:white;
+border-radius:10px;
+padding:30px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.contact{
+text-align:center;
+background:#0f172a;
+color:white;
+}
+
+.contact a{
+color:white;
+text-decoration:none;
+}
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+}
+</style>
 </head>
+
 <body>
-    <h1>TRICITYRISE</h1>
-    <h2>Find the Right Property. Make the Right Move.</h2>
 
-    <p>Welcome to TRICITYRISE - Your trusted real estate consultant in the Tricity region.</p>
+<header>
+<div class="logo">TRICITYRISE</div>
 
-    <h3>Areas We Serve</h3>
-    <ul>
-        <li>Zirakpur</li>
-        <li>Mohali</li>
-        <li>Chandigarh</li>
-        <li>Panchkula</li>
-        <li>New Chandigarh</li>
-        <li>Kharar</li>
-        <li>Derabassi</li>
-    </ul>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#areas">Areas</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <h3>Contact Us</h3>
-    <p>Om Parkash</p>
-    <p>Phone: +91 98880 10321</p>
-    <p>Email: tricityrise@gmail.com</p>
+<section class="hero">
+<h1>Find the Right Property. Make the Right Move.</h1>
+
+<p>Your trusted real estate consultant across the Tricity region.</p>
+
+<a class="btn call-btn" href="tel:+919888010321">
+📞 Call Now
+</a>
+
+<a class="btn whatsapp-btn"
+href="https://wa.me/919888010321"
+target="_blank">
+WhatsApp Us
+</a>
+</section>
+
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Buying Assistance</h3>
+<p>Help buyers find the right property.</p>
+</div>
+
+<div class="card">
+<h3>Selling Assistance</h3>
+<p>Help owners sell properties quickly.</p>
+</div>
+
+<div class="card">
+<h3>Property Marketing</h3>
+<p>Promote properties online and offline.</p>
+</div>
+
+<div class="card">
+<h3>Site Visits</h3>
+<p>Arrange property visits for buyers.</p>
+</div>
+
+<div class="card">
+<h3>Investment Consultation</h3>
+<p>Guidance for real estate investments.</p>
+</div>
+
+<div class="card">
+<h3>Rental Services</h3>
+<p>Support for rental properties.</p>
+</div>
+
+</div>
+</section>
+
+<section id="areas" class="areas">
+<h2 class="section-title">Areas We Cover</h2>
+
+<ul>
+<li>📍 Zirakpur</li>
+<li>📍 Mohali</li>
+<li>📍 Chandigarh</li>
+<li>📍 Panchkula</li>
+<li>📍 New Chandigarh</li>
+<li>📍 Kharar</li>
+<li>📍 Derabassi</li>
+<li>📍 Other Nearby Locations</li>
+</ul>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+<h3>Om Parkash</h3>
+
+<p>
+TRICITYRISE is a trusted real estate consultancy helping buyers,
+sellers, investors and property owners across the Tricity region.
+We focus on transparent dealings, professional guidance and
+personalized support throughout the property journey.
+</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+
+<br>
+
+<p><strong>Om Parkash</strong></p>
+
+<p>
+📞 <a href="tel:+919888010321">+91 98880 10321</a>
+</p>
+
+<p>
+📧 <a href="mailto:tricityrise@gmail.com">
+tricityrise@gmail.com
+</a>
+</p>
+</section>
+
+<footer>
+© 2026 TRICITYRISE | Real Estate Consultant
+</footer>
+
 </body>
 </html>
