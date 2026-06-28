@@ -7,216 +7,170 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-background:#f8f9fb;
-color:#333;
-line-height:1.6;
+    line-height:1.6;
+    color:#333;
 }
 
 header{
-background:#0f172a;
-color:white;
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-position:sticky;
-top:0;
-z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.logo-container{
-display:flex;
-align-items:center;
-gap:12px;
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo-container img{
-height:60px;
-width:60px;
-object-fit:cover;
-border-radius:50%;
-background:white;
+.logo img{
+    height:100px;
+    width:auto;
 }
 
-.logo-text{
-font-size:28px;
-font-weight:bold;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:18px;
-font-weight:500;
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
 }
 
 .hero{
-background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
-url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');
-background-size:cover;
-background-position:center;
-color:white;
-text-align:center;
-padding:100px 20px;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    text-align:center;
+    padding:120px 20px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:15px;
+    font-size:48px;
+    margin-bottom:15px;
 }
 
 .hero p{
-max-width:850px;
-margin:auto;
-margin-bottom:20px;
-font-size:18px;
+    max-width:850px;
+    margin:auto;
+    font-size:18px;
 }
 
-.hero-hours{
-margin-top:15px;
-font-size:15px;
+.hero-buttons{
+    margin-top:30px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-margin:8px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
+.hero-buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    background:#d4a017;
+    color:#fff;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
 }
 
-.call-btn{
-background:white;
-color:#0f172a;
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
 }
 
-.form-btn{
-background:#d4af37;
-color:#0f172a;
+.section h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#1d3557;
 }
 
-.whatsapp-btn{
-background:#25D366;
-color:white;
-}
-
-section{
-padding:60px 8%;
-}
-
-.section-title{
-text-align:center;
-font-size:32px;
-margin-bottom:30px;
-color:#0f172a;
+.section p{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:40px;
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
+    padding:25px;
+    border-radius:10px;
+    background:#f8f8f8;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.card h3{
-margin-bottom:10px;
-color:#0f172a;
+.requirement-form{
+    max-width:800px;
+    margin:40px auto 0;
 }
 
-.highlight{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
+.requirement-form input,
+.requirement-form textarea,
+.requirement-form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
-.form-box{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
-max-width:800px;
-margin:auto;
+.requirement-form button{
+    background:#1d3557;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:5px;
+    cursor:pointer;
 }
 
-.form-box input,
-.form-box textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-.form-box button{
-background:#0f172a;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-.contact{
-background:#0f172a;
-color:white;
-text-align:center;
-}
-
-.contact a{
-color:white;
-text-decoration:none;
+.contact-box{
+    text-align:center;
+    font-size:18px;
 }
 
 footer{
-background:#020617;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.social-links a{
-display:inline-block;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-color:#0f172a;
+    background:#1d3557;
+    color:#fff;
+    text-align:center;
+    padding:25px;
 }
 
 @media(max-width:768px){
 
+.navbar{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
 .hero h1{
-font-size:32px;
-}
-
-nav{
-margin-top:15px;
-width:100%;
-}
-
-nav a{
-display:block;
-margin:10px 0;
-}
-
-.logo-text{
-font-size:22px;
+    font-size:34px;
 }
 }
 </style>
@@ -225,20 +179,23 @@ font-size:22px;
 <body>
 
 <header>
+<div class="navbar">
 
-<div class="logo-container">
+<div class="logo">
 <img src="logo.jpeg" alt="TRICITYRISE Logo">
-<div class="logo-text">TRICITYRISE</div>
 </div>
 
 <nav>
-<a href="#services">Services</a>
-<a href="#properties">Properties</a>
-<a href="#areas">Areas</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#areas">Areas</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
+</div>
 </header>
 
 <section class="hero">
@@ -247,156 +204,102 @@ font-size:22px;
 
 <p>
 Real Guidance. Right Choice. Better Tomorrow.
-Helping buyers find residential, commercial, plot, resale and rental opportunities across the Tricity region.
-</p>
-
-<a class="btn call-btn" href="tel:+919888010321">📞 Call Now</a>
-
-<a class="btn form-btn" href="#requirement">📝 Get Property Assistance</a>
-
-<a class="btn whatsapp-btn" href="https://wa.me/919888010321" target="_blank">💬 WhatsApp</a>
-
-<div class="hero-hours">
-🕒 Monday – Saturday | 10:00 AM – 7:00 PM IST
-</div>
-
-</section>
-
-<section id="requirement">
-
-<h2 class="section-title">Tell Us Your Requirement</h2>
-
-<div class="highlight">
-
-<p>
-Looking for a property but can't find the right option?
-Share your requirements and we'll help identify suitable options based on your budget, preferred location and property type.
-</p>
-
-<br>
-
-<p>✔ Residential Properties</p>
-<p>✔ Commercial Properties</p>
-<p>✔ Residential & Commercial Plots</p>
-<p>✔ Independent Houses & Villas</p>
-<p>✔ Resale Properties</p>
-<p>✔ Rental Properties</p>
-
-<br>
-
-<a class="btn call-btn" href="tel:+919888010321">📞 Call Us</a>
-
-<a class="btn whatsapp-btn" href="https://wa.me/919888010321" target="_blank">💬 WhatsApp</a>
-
-</div>
-
 <br><br>
+Helping buyers, sellers and investors find residential, commercial,
+plot, resale and rental opportunities across the Tricity region.
+</p>
 
-<div class="form-box">
-
-<h3>Submit Your Requirement</h3>
-
-<input type="text" placeholder="Name">
-<input type="tel" placeholder="Mobile Number">
-<input type="text" placeholder="Preferred Location">
-<input type="text" placeholder="Property Type">
-<input type="text" placeholder="Budget Range">
-<textarea rows="5" placeholder="Additional Requirements"></textarea>
-
-<button>Submit Requirement</button>
-
+<div class="hero-buttons">
+<a href="tel:+919888010321">📞 Call Now</a>
+<a href="#requirement">🏡 Get Property Assistance</a>
+<a href="https://wa.me/919888010321">💬 WhatsApp</a>
 </div>
+
+<br>
+<p>🕒 10:00 AM – 7:00 PM IST</p>
 
 </section>
 
-<section id="services">
+<section class="section" id="services">
 
-<h2 class="section-title">Our Services</h2>
+<h2>Our Services</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Buying Assistance</h3>
-<p>Helping buyers find suitable properties.</p>
+<p>Expert guidance for finding the right property.</p>
 </div>
 
 <div class="card">
 <h3>Selling Assistance</h3>
-<p>Support for property owners and sellers.</p>
+<p>Helping owners market and sell properties effectively.</p>
 </div>
 
 <div class="card">
 <h3>Property Marketing</h3>
-<p>Promoting properties through multiple channels.</p>
+<p>Professional promotion for maximum visibility.</p>
 </div>
 
 <div class="card">
 <h3>Site Visits</h3>
-<p>Property visit planning and coordination.</p>
+<p>Organized property tours and inspections.</p>
 </div>
 
 <div class="card">
 <h3>Investment Consultation</h3>
-<p>Real estate investment guidance.</p>
+<p>Advice for smart real estate investments.</p>
 </div>
 
 <div class="card">
 <h3>Rental Services</h3>
-<p>Residential and commercial rental support.</p>
+<p>Rental property search and tenant support.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="properties">
+<section class="section" id="properties">
 
-<h2 class="section-title">What We Help You Find</h2>
+<h2>Property Opportunities</h2>
+
+<p>
+Explore residential properties, commercial spaces, plots,
+resale properties, rental opportunities and builder inventory.
+</p>
 
 <div class="grid">
 
-<div class="card"><h3>Apartments & Flats</h3></div>
-<div class="card"><h3>Independent Houses & Villas</h3></div>
-<div class="card"><h3>Residential Plots</h3></div>
-<div class="card"><h3>Commercial Plots</h3></div>
-<div class="card"><h3>Shops & SCOs</h3></div>
-<div class="card"><h3>Office Spaces</h3></div>
-<div class="card"><h3>Rental Properties</h3></div>
-<div class="card"><h3>Resale Properties</h3></div>
+<div class="card">Residential Properties</div>
+<div class="card">Commercial Properties</div>
+<div class="card">Residential Plots</div>
+<div class="card">Commercial Plots</div>
+<div class="card">Independent Houses & Villas</div>
+<div class="card">Rental Properties</div>
+<div class="card">Resale Properties</div>
+<div class="card">Builder Opportunities</div>
 
 </div>
 
-</section>
-
-<section>
-
-<h2 class="section-title">Property Opportunities</h2>
-
-<div class="highlight">
+<br><br>
 
 <p>
-Explore opportunities across Chandigarh, Mohali, Zirakpur, Panchkula, New Chandigarh, Kharar, Dera Bassi, Dhakoli, Gazipur and Lalru.
+Projects and opportunities from Maya Garden Magnesia,
+Sushma, SBP, Green Lotus and JLPL.
 </p>
-
-<br>
-
-<p>
-Including opportunities from Maya Garden Magnesia, Sushma, SBP, Green Lotus, JLPL and other trusted developers, along with plots, resale properties, rental opportunities and independent houses.
-</p>
-
-</div>
 
 </section>
 
-<section id="areas">
+<section class="section" id="areas">
 
-<h2 class="section-title">Areas We Serve</h2>
+<h2>Areas We Serve</h2>
 
 <div class="grid">
 
-<div class="card">Zirakpur</div>
-<div class="card">Mohali</div>
 <div class="card">Chandigarh</div>
+<div class="card">Mohali</div>
+<div class="card">Zirakpur</div>
 <div class="card">Panchkula</div>
 <div class="card">New Chandigarh</div>
 <div class="card">Kharar</div>
@@ -409,82 +312,94 @@ Including opportunities from Maya Garden Magnesia, Sushma, SBP, Green Lotus, JLP
 
 </section>
 
-<section>
+<section class="section" id="requirement">
 
-<h2 class="section-title">Why Choose TRICITYRISE</h2>
-
-<div class="grid">
-
-<div class="card">✔ Local Market Expertise</div>
-<div class="card">✔ Verified Property Opportunities</div>
-<div class="card">✔ Personalized Recommendations</div>
-<div class="card">✔ Site Visit Assistance</div>
-<div class="card">✔ Investment Guidance</div>
-<div class="card">✔ Transparent Process</div>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h2 class="section-title">About TRICITYRISE</h2>
-
-<div class="highlight">
+<h2>Tell Us What You're Looking For</h2>
 
 <p>
-TRICITYRISE is a trusted real estate consultancy helping buyers, sellers, investors and property owners across the Tricity region.
+Looking for the right property but not sure where to start?
+<br><br>
+📞 Call us directly for immediate assistance, or fill out the form below
+and we'll contact you to understand your requirements and help identify
+suitable property options.
+<br><br>
+Whether you're looking for a residential property, commercial space,
+plot, rental property, resale opportunity or investment option,
+TRICITYRISE is here to help.
 </p>
 
-<br>
+<form class="requirement-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Mobile Number">
+
+<input type="text" placeholder="Preferred Location">
+
+<select>
+<option>Property Type</option>
+<option>Residential</option>
+<option>Commercial</option>
+<option>Plot</option>
+<option>Rental</option>
+<option>Resale</option>
+</select>
+
+<input type="text" placeholder="Budget Range">
+
+<textarea rows="5" placeholder="Additional Requirements"></textarea>
+
+<button type="submit">Submit Requirement</button>
+
+</form>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>About TRICITYRISE</h2>
 
 <p>
-We assist with residential, commercial, plot, resale, rental and investment opportunities while focusing on transparent guidance, professional support and personalized recommendations.
+TRICITYRISE is a trusted real estate consultancy helping buyers,
+sellers, investors and property owners across Chandigarh, Mohali,
+Zirakpur and surrounding areas.
+<br><br>
+Our goal is to provide transparent guidance and help clients make
+confident real estate decisions.
 </p>
 
-</div>
-
 </section>
 
-<section>
+<section class="section" id="contact">
 
-<h2 class="section-title">Connect With Us</h2>
+<h2>Contact Us</h2>
 
-<div class="social-links" style="text-align:center;">
+<div class="contact-box">
 
-<a href="https://www.instagram.com/tricityrise" target="_blank">
-📸 Instagram
-</a>
-
-<a href="https://www.facebook.com" target="_blank">
-📘 Facebook
-</a>
-
-</div>
-
-</section>
-
-<section id="contact" class="contact">
-
-<h2>TRICITYRISE Real Estate Consultancy</h2>
-
+<p>📞 +91 98880 10321</p>
 <br>
 
-<p>📞 <a href="tel:+919888010321">+91 98880 10321</a></p>
+<p>📧 tricityrise@gmail.com</p>
+<br>
 
-<p>📧 <a href="mailto:tricityrise@gmail.com">tricityrise@gmail.com</a></p>
+<p>🕒 10:00 AM – 7:00 PM IST</p>
+<br>
 
-<p>🕒 Monday – Saturday | 10:00 AM – 7:00 PM IST</p>
+<p>📷 Instagram: @tricityrise</p>
+<br>
+
+<p>📘 Facebook: TRICITYRISE</p>
+
+</div>
 
 </section>
 
 <footer>
 
-<p><strong>TRICITYRISE | Real Estate Consultancy</strong></p>
-
-<p>Real Guidance. Right Choice. Better Tomorrow.</p>
-
-<p>© 2026 TRICITYRISE. All Rights Reserved.</p>
+<p>
+© 2026 TRICITYRISE Real Estate Consultancy.
+All Rights Reserved.
+</p>
 
 </footer>
 
